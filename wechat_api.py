@@ -5,20 +5,20 @@ import hashlib
 app = Flask(__name__)
 
 
-@app.route('/wechat')
+@app.route('/wechat', methods=['post', 'get'])
 def index():
     # 设置token
     token = 'Samuel'
     # 获取参数
-    data = request.args
-    print data
-    signature = data.get('signature')
-    timestamp = data.get('timestamp')
-    nonce = data.get('nonce')
-    echostr = data.get('echostr')
+    signature = request.args.get("signature")
+    timestamp = request.args.get("timestamp")
+    nonce = request.args.get("nonce")
+    echostr = request.args.get("echostr")
+    print '--'*50
+    print signature,timestamp,nonce,echostr
     # 将token、timestamp、nonce三个参数进行字典序排序
-    temp = [timestamp, nonce, token].sort()
-    temp = temp.sort()
+    temp = [timestamp, nonce, token]
+    temp.sort()
     # 将三个参数字符串拼接成一个字符串进行sha1加密
     temp = "".join(temp)
     sig = hashlib.sha1(temp).hexdigest()
