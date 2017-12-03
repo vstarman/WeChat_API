@@ -15,8 +15,8 @@ def index():
     timestamp = request.args.get("timestamp")
     nonce = request.args.get("nonce")
     echostr = request.args.get("echostr")
-    print '--'*50
-    print signature,timestamp,nonce,echostr
+
+    # print signature,timestamp,nonce,echostr
     # 将token、timestamp、nonce三个参数进行字典序排序
     temp = [timestamp, nonce, token]
     temp.sort()
@@ -42,7 +42,6 @@ def index():
         xml_data = request.data
         xml_dict = xmltodict.parse(xml_data)['xml']
         msg_type = xml_dict['MsgType']
-        print '------------->msg_type:', msg_type
         if 'text' == msg_type:
             # 接收文本消息
             response_dic = {
@@ -52,7 +51,20 @@ def index():
                 "MsgType": "text",
                 "Content": xml_dict.get("Content"),
             }
-            print 'Content:', xml_dict.get('Content')
+            print '--' * 50
+            print 'Text Content:', xml_dict.get('Content')
+        elif 'voice' == msg_type:
+            # 接收语音消息
+            response_dic = {
+                "ToUserName": xml_dict.get("FromUserName"),
+                "FromUserName": xml_dict.get("ToUserName"),
+                "CreateTime": int(time.time()),
+                "MsgType": "text",
+                # 微信自带语音识别
+                "Content": xml_dict.get("Recognition"),
+            }
+            print '--' * 50
+            print 'Voice Content:', xml_dict.get('Recognition')
         else:
             response_dic = {
                 "ToUserName": xml_dict.get("FromUserName"),
