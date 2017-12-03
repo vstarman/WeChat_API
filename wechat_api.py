@@ -5,7 +5,7 @@ import hashlib
 app = Flask(__name__)
 
 
-@app.route('/wechat8000')
+@app.route('/wechat')
 def index():
     # 设置token
     token = 'Samuel'
@@ -29,4 +29,4 @@ def index():
         return 'error', 403
 
 if __name__ == '__main__':
-    app.run(port=8000)
+    app.run(port=8002, debug=True)
