@@ -6,6 +6,7 @@ import time
 app = Flask(__name__)
 
 
+
 @app.route('/wechat', methods=['post', 'get'])
 def index():
     # 设置token
