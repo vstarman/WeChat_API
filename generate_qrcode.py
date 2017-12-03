@@ -71,7 +71,7 @@ def index(scene_id):
     return '<img src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=%s">' % ticket
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8003)
 
 # if __name__ == '__main__':
 #     # 测试是否能获取二维码
