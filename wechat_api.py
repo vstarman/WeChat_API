@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from flask import Flask, request, make_response
+from flask import Flask, request
 import hashlib
 import xmltodict
 import time
@@ -45,7 +45,7 @@ def index():
         print '---------------> : %s' % msg_type
         if 'text' == msg_type:
             # 接收文本消息
-            response_dic = {
+            response_dict = {
                 "ToUserName": xml_dict.get("FromUserName"),
                 "FromUserName": xml_dict.get("ToUserName"),
                 "CreateTime": int(time.time()),
@@ -56,27 +56,54 @@ def index():
             print 'Text Content:', xml_dict.get('Content')
         elif 'voice' == msg_type:
             # 接收语音消息
-            response_dic = {
+            response_dict = {
                 "ToUserName": xml_dict.get("FromUserName"),
                 "FromUserName": xml_dict.get("ToUserName"),
                 "CreateTime": int(time.time()),
                 "MsgType": "text",
-                # 微信自带语音识别
                 "Content": xml_dict.get("Recognition"),
             }
             print '--' * 50
             print 'Voice Content:', xml_dict.get('Recognition')
+        elif 'event' == msg_type:
+            # 代表当前有用户订阅了
+            if 'subscribe' == xml_dict.get('Event'):
+                response_dict = {
+                    "ToUserName": xml_dict.get("FromUserName"),
+                    "FromUserName": xml_dict.get("ToUserName"),
+                    "CreateTime": int(time.time()),
+                    "MsgType": "text",
+                    "Content": "感谢你丫的关注,送你一杯卡布奇诺...",
+                }
+                if xml_dict.get("EventKey"):
+                    response_dict["Content"] += "；场景值是："
+                    response_dict["Content"] += xml_dict.get("EventKey")
+            elif "SCAN" == xml_dict.get("Event"):
+                # 代表当前用户已关注，扫描的二维码
+                response_dict = {
+                    "ToUserName": xml_dict.get("FromUserName"),
+                    "FromUserName": xml_dict.get("ToUserName"),
+                    "CreateTime": int(time.time()),
+                    "MsgType": "text",
+                    "Content": "感谢你的扫描..."
+                }
+                if xml_dict.get("EventKey"):
+                    response_dict["Content"] += "；场景值是："
+                    response_dict["Content"] += xml_dict.get("EventKey")
+            else:   # 可能被取消关注了
+                print '%s取消关注了...' % xml_dict.get("FromUserName")
+                response_dict = None
         else:
-            response_dic = {
+            response_dict = {
                 "ToUserName": xml_dict.get("FromUserName"),
                 "FromUserName": xml_dict.get("ToUserName"),
                 "CreateTime": int(time.time()),
                 "MsgType": "text",
                 "Content": '文件格式不对,你丫欠揍吧~',
             }
-        if response_dic:
-            response_dic = {'xml': response_dic}
-            return xmltodict.unparse(response_dic)
+        if response_dict:
+            response_dict = {'xml': response_dict}
+            return xmltodict.unparse(response_dict)
         else:
             return ''
     else:
