@@ -5,7 +5,16 @@ import hashlib
 app = Flask(__name__)
 
 
+<<<<<<< HEAD
 @app.route('/wechat')
+=======
+@app.route('/')
+def index():
+    return 'index'
+
+
+@app.route('/wechat8000')
+>>>>>>> 47044ce41ed24957f6a32594bb4f1cad070b12b8
 def index():
     # 设置token
     token = 'Samuel'
