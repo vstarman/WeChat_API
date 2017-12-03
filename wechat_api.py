@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
 from flask import Flask, request, make_response
 import hashlib
-
+import xmltodict
+import time
 app = Flask(__name__)
 
 
@@ -24,7 +25,47 @@ def index():
     sig = hashlib.sha1(temp).hexdigest()
     # 开发者获得加密后的字符串可与signature对比，标识该请求来源于微信
     if signature == sig:
-        return make_response(echostr)
+        if request.method == 'GET':
+            return echostr
+        # todo: 否则为post请求
+        """
+        <xml>
+         <ToUserName><![CDATA[toUser]]></ToUserName>
+         <FromUserName><![CDATA[fromUser]]></FromUserName>
+         <CreateTime>1348831860</CreateTime>
+         <MsgType><![CDATA[text]]></MsgType>
+         <Content><![CDATA[this is a test]]></Content>
+         <MsgId>1234567890123456</MsgId>
+         </xml>
+        """
+        # 获取文本字典信息
+        xml_data = request.data
+        xml_dict = xmltodict.parse(xml_data)['xml']
+        msg_type = xml_dict['MsgType']
+        print '------------->msg_type:', msg_type
+        if 'text' == msg_type:
+            # 接收文本消息
+            response_dic = {
+                "ToUserName": xml_dict.get("FromUserName"),
+                "FromUserName": xml_dict.get("ToUserName"),
+                "CreateTime": int(time.time()),
+                "MsgType": "text",
+                "Content": xml_dict.get("Content"),
+            }
+            print 'Content:', xml_dict.get('Content')
+        else:
+            response_dic = {
+                "ToUserName": xml_dict.get("FromUserName"),
+                "FromUserName": xml_dict.get("ToUserName"),
+                "CreateTime": int(time.time()),
+                "MsgType": "text",
+                "Content": '文件格式不对,你丫欠揍吧~',
+            }
+        if response_dic:
+            response_dic = {'xml': response_dic}
+            return xmltodict.unparse(response_dic)
+        else:
+            return ''
     else:
         return 'error', 403
 
