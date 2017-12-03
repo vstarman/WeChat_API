@@ -6,7 +6,6 @@ import time
 app = Flask(__name__)
 
 
-
 @app.route('/wechat', methods=['post', 'get'])
 def index():
     # 设置token
@@ -28,7 +27,7 @@ def index():
     if signature == sig:
         if request.method == 'GET':
             return echostr
-        # todo: 否则为post请求
+        # 否则为post请求
         """
         <xml>
          <ToUserName><![CDATA[toUser]]></ToUserName>
