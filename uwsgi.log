@@ -139,3 +139,186 @@ Text Content: ---------------> : text
 Text Content: ---------------> : text
 ----------------------------------------------------------------------------------------------------
 [pid: 11724|app: 0|req: 4/4] 127.0.0.1 () {40 vars in 689 bytes} [Tue Dec  5 01:19:12 2017] POST /wechat?signature=a209b4bc47a334aeba3bf77236ffc88157af594a&timestamp=1512407952&nonce=1983209798&openid=o3ftU1Ous1JsvnzRNQWPmxr8G2bY => generated 291 bytes in 1 msecs (HTTP/1.0 500) 2 headers in 84 bytes (1 switches on core 1)
+*** Starting uWSGI 2.0.15 (64bit) on [Tue Dec  5 01:27:55 2017] ***
+compiled with version: 5.4.0 20160609 on 02 December 2017 00:53:09
+os: Linux-4.4.0-62-generic #83-Ubuntu SMP Wed Jan 18 14:10:15 UTC 2017
+nodename: Samuel
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/home/WeChat_API
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/Flask_py/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/home/WeChat_API
+your processes number limit is 3826
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8002).
+bind(): Address already in use [core/socket.c line 769]
+Text Content: ---------------> : text
+----------------------------------------------------------------------------------------------------
+[pid: 11724|app: 0|req: 5/5] 127.0.0.1 () {40 vars in 689 bytes} [Tue Dec  5 01:28:25 2017] POST /wechat?signature=251b7f06ce31b437cb10750eafa185e8876f244f&timestamp=1512408505&nonce=1419260724&openid=o3ftU1Ous1JsvnzRNQWPmxr8G2bY => generated 291 bytes in 1 msecs (HTTP/1.0 500) 2 headers in 84 bytes (1 switches on core 0)
+Text Content: ---------------> : text
+----------------------------------------------------------------------------------------------------
+[pid: 11724|app: 0|req: 6/6] 127.0.0.1 () {40 vars in 689 bytes} [Tue Dec  5 01:29:03 2017] POST /wechat?signature=61b725a692021e96f07d954f19bd29c8029af0a8&timestamp=1512408543&nonce=1739743712&openid=o3ftU1Ous1JsvnzRNQWPmxr8G2bY => generated 291 bytes in 1 msecs (HTTP/1.0 500) 2 headers in 84 bytes (1 switches on core 1)
+---------------> : text
+----------------------------------------------------------------------------------------------------
+[pid: 11727|app: 0|req: 1/7] 127.0.0.1 () {40 vars in 689 bytes} [Tue Dec  5 01:29:05 2017] POST /wechat?signature=adedd7c8b3479d74454d9f2507457c990e5176eb&timestamp=1512408544&nonce=1946943056&openid=o3ftU1Ous1JsvnzRNQWPmxr8G2bY => generated 291 bytes in 10 msecs (HTTP/1.0 500) 2 headers in 84 bytes (1 switches on core 0)
+Tue Dec  5 01:30:30 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:30:30 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:30:30 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:30:30 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Text Content: Tue Dec  5 01:30:30 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:30:30 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:30:30 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:30:30 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Text Content: *** Starting uWSGI 2.0.15 (64bit) on [Tue Dec  5 01:30:34 2017] ***
+compiled with version: 5.4.0 20160609 on 02 December 2017 00:53:09
+os: Linux-4.4.0-62-generic #83-Ubuntu SMP Wed Jan 18 14:10:15 UTC 2017
+nodename: Samuel
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/home/WeChat_API
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/Flask_py/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/home/WeChat_API
+your processes number limit is 3826
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:44660 (port auto-assigned) fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1cef1f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 702000 bytes (685 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /root/.virtualenvs/Flask_py/lib/python2.7/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1cef1f0 pid: 11878 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11878)
+spawned uWSGI worker 1 (pid: 11881, cores: 2)
+spawned uWSGI worker 2 (pid: 11882, cores: 2)
+spawned uWSGI worker 3 (pid: 11883, cores: 2)
+spawned uWSGI worker 4 (pid: 11884, cores: 2)
+spawned uWSGI http 1 (pid: 11885)
+d3b45556de8ef78c02fbed1ccb765e7ddad29c49 1512408638 2066900880 None
+---------------> : text
+----------------------------------------------------------------------------------------------------
+[pid: 11884|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 687 bytes} [Tue Dec  5 01:30:39 2017] POST /wechat?signature=d3b45556de8ef78c02fbed1ccb765e7ddad29c49&timestamp=1512408638&nonce=2066900880&openid=o3ftU1Ous1JsvnzRNQWPmxr8G2bY => generated 291 bytes in 10 msecs (HTTP/1.0 500) 2 headers in 84 bytes (1 switches on core 0)
+Tue Dec  5 01:32:48 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:32:48 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:32:48 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:32:48 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:32:48 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:32:48 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:32:48 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Text Content: Tue Dec  5 01:32:48 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Tue Dec  5 01:32:52 2017] ***
+compiled with version: 5.4.0 20160609 on 02 December 2017 00:53:09
+os: Linux-4.4.0-62-generic #83-Ubuntu SMP Wed Jan 18 14:10:15 UTC 2017
+nodename: Samuel
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/home/WeChat_API
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/Flask_py/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/home/WeChat_API
+your processes number limit is 3826
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:39454 (port auto-assigned) fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1bc41f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 702000 bytes (685 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /root/.virtualenvs/Flask_py/lib/python2.7/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1bc41f0 pid: 11925 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11925)
+spawned uWSGI worker 1 (pid: 11928, cores: 2)
+spawned uWSGI worker 2 (pid: 11929, cores: 2)
+spawned uWSGI worker 3 (pid: 11930, cores: 2)
+spawned uWSGI worker 4 (pid: 11931, cores: 2)
+spawned uWSGI http 1 (pid: 11932)
+52da814d240a2b6701818b6e801f06ebd7a32210 1512408789 781923583 None
+---------------> : text
+text----------------------------------------------------------------------------------------------------
+[pid: 11929|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 686 bytes} [Tue Dec  5 01:33:09 2017] POST /wechat?signature=52da814d240a2b6701818b6e801f06ebd7a32210&timestamp=1512408789&nonce=781923583&openid=o3ftU1Ous1JsvnzRNQWPmxr8G2bY => generated 291 bytes in 10 msecs (HTTP/1.0 500) 2 headers in 84 bytes (1 switches on core 0)
+Tue Dec  5 01:38:16 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:38:16 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:38:16 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:38:16 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:38:16 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:38:16 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Text Content: Tue Dec  5 01:38:16 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 01:38:16 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Tue Dec  5 01:38:59 2017] ***
+compiled with version: 5.4.0 20160609 on 02 December 2017 00:53:09
+os: Linux-4.4.0-62-generic #83-Ubuntu SMP Wed Jan 18 14:10:15 UTC 2017
+nodename: Samuel
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/home/WeChat_API
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/Flask_py/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/home/WeChat_API
+your processes number limit is 3826
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uWSGI http bound on :8002 fd 4
+uwsgi socket 0 bound to TCP address 127.0.0.1:41080 (port auto-assigned) fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0xf4e1f0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 702000 bytes (685 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /root/.virtualenvs/Flask_py/lib/python2.7/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xf4e1f0 pid: 11994 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11994)
+spawned uWSGI worker 1 (pid: 11997, cores: 2)
+spawned uWSGI worker 2 (pid: 11998, cores: 2)
+spawned uWSGI worker 3 (pid: 11999, cores: 2)
+spawned uWSGI worker 4 (pid: 12000, cores: 2)
+spawned uWSGI http 1 (pid: 12001)
+80226b2e5dd9963ac2224f4a6193a300c8507b25 1512409150 1912196815 None
+---------------> : text
+OrderedDict([(u'ToUserName', u'gh_69b51255fc68'), (u'FromUserName', u'o3ftU1Ous1JsvnzRNQWPmxr8G2bY'), (u'CreateTime', u'1512409150'), (u'MsgType', u'text'), (u'Content', u'\u54e5\u54e5'), (u'MsgId', u'6495747837878613462')])
+text----------------------------------------------------------------------------------------------------
+[pid: 12000|app: 0|req: 1/1] 127.0.0.1 () {40 vars in 689 bytes} [Tue Dec  5 01:39:10 2017] POST /wechat?signature=80226b2e5dd9963ac2224f4a6193a300c8507b25&timestamp=1512409150&nonce=1912196815&openid=o3ftU1Ous1JsvnzRNQWPmxr8G2bY => generated 291 bytes in 10 msecs (HTTP/1.0 500) 2 headers in 84 bytes (1 switches on core 0)
+fb94d70902af28ec3516a9da93195cc6b620a1fc 1512409245 1613828526 None
+---------------> : text
+OrderedDict([(u'ToUserName', u'gh_69b51255fc68'), (u'FromUserName', u'o3ftU1Ous1JsvnzRNQWPmxr8G2bY'), (u'CreateTime', u'1512409245'), (u'MsgType', u'text'), (u'Content', u'\u4f60\u597d'), (u'MsgId', u'6495748245900506585')])
+text----------------------------------------------------------------------------------------------------
+[pid: 11997|app: 0|req: 1/2] 127.0.0.1 () {40 vars in 689 bytes} [Tue Dec  5 01:40:45 2017] POST /wechat?signature=fb94d70902af28ec3516a9da93195cc6b620a1fc&timestamp=1512409245&nonce=1613828526&openid=o3ftU1Ous1JsvnzRNQWPmxr8G2bY => generated 291 bytes in 10 msecs (HTTP/1.0 500) 2 headers in 84 bytes (1 switches on core 0)

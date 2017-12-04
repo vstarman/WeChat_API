@@ -16,7 +16,7 @@ def index():
     nonce = request.args.get("nonce")
     echostr = request.args.get("echostr")
 
-    # print signature,timestamp,nonce,echostr
+    print signature,timestamp,nonce,echostr
     # 将token、timestamp、nonce三个参数进行字典序排序
     temp = [timestamp, nonce, token]
     temp.sort()
@@ -43,6 +43,7 @@ def index():
         xml_dict = xmltodict.parse(xml_data)['xml']
         msg_type = xml_dict['MsgType']
         print '---------------> : %s' % msg_type
+	print xml_dict
         if 'text' == msg_type:
             # 接收文本消息
             response_dict = {
@@ -52,7 +53,7 @@ def index():
                 "MsgType": "text",
                 "Content": xml_dict.get("Content"),
             }
-            print '--' * 50
+            print 'text' + '--' * 50
             print 'Text Content:', xml_dict.get('Content')
         elif 'voice' == msg_type:
             # 接收语音消息
@@ -63,7 +64,7 @@ def index():
                 "MsgType": "text",
                 "Content": xml_dict.get("Recognition"),
             }
-            print '--' * 50
+            print 'voice' + '--' * 50
             print 'Voice Content:', xml_dict.get('Recognition')
         elif 'event' == msg_type:
             # 代表当前有用户订阅了
