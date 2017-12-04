@@ -1,0 +1,94 @@
+*** Starting uWSGI 2.0.15 (64bit) on [Sun Dec  3 23:48:06 2017] ***
+compiled with version: 5.4.0 20160609 on 02 December 2017 00:53:09
+os: Linux-4.4.0-62-generic #83-Ubuntu SMP Wed Jan 18 14:10:15 UTC 2017
+nodename: Samuel
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/home/WeChat_API
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/Flask_py/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/home/WeChat_API
+your processes number limit is 3826
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :5000 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x26a1c30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 702000 bytes (685 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /root/.virtualenvs/Flask_py/lib/python2.7/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x26a1c30 pid: 2798 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2798)
+spawned uWSGI worker 1 (pid: 2801, cores: 2)
+spawned uWSGI worker 2 (pid: 2802, cores: 2)
+spawned uWSGI worker 3 (pid: 2803, cores: 2)
+spawned uWSGI worker 4 (pid: 2804, cores: 2)
+uwsgi_proto_uwsgi_parser(): No such file or directory [proto/uwsgi.c line 40]
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+uwsgi_proto_uwsgi_parser(): No such file or directory [proto/uwsgi.c line 40]
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+uwsgi_proto_uwsgi_parser(): No such file or directory [proto/uwsgi.c line 40]
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+uwsgi_proto_uwsgi_parser(): Resource temporarily unavailable [proto/uwsgi.c line 40]
+uwsgi_proto_uwsgi_parser(): No such file or directory [proto/uwsgi.c line 40]
+Tue Dec  5 00:03:44 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:03:44 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:03:44 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:03:44 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:03:44 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:03:44 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:03:44 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:03:44 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.15 (64bit) on [Tue Dec  5 00:09:32 2017] ***
+compiled with version: 5.4.0 20160609 on 02 December 2017 00:53:09
+os: Linux-4.4.0-62-generic #83-Ubuntu SMP Wed Jan 18 14:10:15 UTC 2017
+nodename: Samuel
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/home/WeChat_API
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenvs/Flask_py/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/home/WeChat_API
+your processes number limit is 3826
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :5000 fd 3
+Python version: 2.7.12 (default, Nov 19 2016, 06:48:10)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x11dac30
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 702000 bytes (685 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+added /root/.virtualenvs/Flask_py/lib/python2.7/site-packages/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x11dac30 pid: 10897 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10897)
+spawned uWSGI worker 1 (pid: 10900, cores: 2)
+spawned uWSGI worker 2 (pid: 10901, cores: 2)
+spawned uWSGI worker 3 (pid: 10902, cores: 2)
+spawned uWSGI worker 4 (pid: 10903, cores: 2)
+Tue Dec  5 00:14:24 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:14:24 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:14:24 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:14:24 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:14:24 2017 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:14:24 2017 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:14:24 2017 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Dec  5 00:14:24 2017 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
