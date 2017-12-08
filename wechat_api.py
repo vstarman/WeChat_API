@@ -16,7 +16,7 @@ def index():
     nonce = request.args.get("nonce")
     echostr = request.args.get("echostr")
 
-    print signature,timestamp,nonce,echostr
+    # print signature, timestamp, nonce, echostr
     # 将token、timestamp、nonce三个参数进行字典序排序
     temp = [timestamp, nonce, token]
     temp.sort()
@@ -43,7 +43,7 @@ def index():
         xml_dict = xmltodict.parse(xml_data)['xml']
         msg_type = xml_dict['MsgType']
         print '---------------> : %s' % msg_type
-	print xml_dict
+        print xml_dict
         if 'text' == msg_type:
             # 接收文本消息
             response_dict = {
